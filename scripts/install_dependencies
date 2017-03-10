@@ -1,0 +1,3 @@
+#!/bin/bash
+yum groupinstall -y --skip-broken "Web Server"
+echo "Successfully Installed!"

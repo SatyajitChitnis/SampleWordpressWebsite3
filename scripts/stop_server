@@ -1,0 +1,10 @@
+#!/bin/bash
+isExistApp = `pgrep httpd`
+if [[ -n  $isExistApp ]]; then
+    service httpd stop        
+fi
+date=`date +%Y-%m-%d_%H:%M:%S`
+rootdir='/opt/codebackup/democode'
+dir=$rootdir-$date
+mkdir -p $dir
+cp -r /var/www/html/* $dir
